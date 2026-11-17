@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Canada’s Premier Hotels and Resorts in 2026 | Luxury Travel Guide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-main: #0b0f19;
+            --bg-card: #131a2c;
+            --bg-card-alt: #1a233a;
+            --color-primary: #a855f7;
+            --color-primary-dark: #7e22ce;
+            --color-emerald: #10b981;
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --border-glow: rgba(168, 85, 247, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-main);
+            background-image: radial-gradient(circle at 50% 0%, #25183a 0%, var(--bg-main) 75%);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding-bottom: 60px;
+        }
+
+        .container {
+            max-width: 940px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Hero Header Section */
+        header {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.6rem;
+            margin-bottom: 20px;
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        header h1 span {
+            background: linear-gradient(to right, var(--color-primary), #c084fc);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .intro-block {
+            background: rgba(19, 26, 44, 0.7);
+            border-left: 4px solid var(--color-primary);
+            padding: 25px;
+            border-radius: 0 12px 12px 0;
+            text-align: left;
+            font-size: 1.02rem;
+            color: #e5e7eb;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            margin-bottom: 20px;
+        }
+
+        /* Directory Cards Layout */
+        .directory-pipeline {
+            display: flex;
+            flex-direction: column;
+            gap: 35px;
+            margin-top: 40px;
+        }
+
+        .hotel-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-glow);
+            border-radius: 14px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+            overflow: hidden;
+            position: relative;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .hotel-card:hover {
+            transform: translateY(-3px);
+            border-color: rgba(168, 85, 247, 0.4);
+        }
+
+        .card-inner {
+            padding: 35px;
+        }
+
+        .card-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 12px;
+            color: #ffffff;
+        }
+
+        /* Sub-Feature Grid Items */
+        .details-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .sub-property-feature h4 {
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            color: #c084fc;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .sub-property-feature h4 i {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            color: var(--color-emerald);
+        }
+
+        .sub-property-feature p {
+            color: #d1d5db;
+            font-size: 0.95rem;
+        }
+
+        /* Action Links / Custom CTA Buttons */
+        .action-container {
+            margin-top: 15px;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            width: 100%;
+            background: linear-gradient(to bottom, var(--color-primary), var(--color-primary-dark));
+            color: #ffffff;
+            text-decoration: none;
+            font-family: 'Inter', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            padding: 14px;
+            border-radius: 8px;
+            border-bottom: 4px solid #6b21a8;
+            letter-spacing: 0.5px;
+            transition: all 0.2s ease;
+        }
+
+        .cta-button:hover {
+            filter: brightness(1.15);
+            transform: translateY(-1px);
+        }
+
+        /* Summary Context Box */
+        .overview-box {
+            margin-top: 50px;
+            background: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 35px;
+        }
+
+        .overview-box h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        .overview-p {
+            color: #d1d5db;
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+
+        .overview-p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Legal Footers & Disclaimers */
+        .footer-wrap {
+            margin-top: 60px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding-top: 30px;
+        }
+
+        .disclaimer-box {
+            background: rgba(19, 26, 44, 0.4);
+            padding: 20px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .disclaimer-box strong {
+            color: #ffffff;
+            display: block;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        .footer-identity {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #6b7280;
+            line-height: 1.6;
+        }
+
+        .footer-identity a {
+            color: #9ca3af;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .footer-identity a:hover {
+            color: var(--color-primary);
+            text-decoration: underline;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 768px) {
+            header h1 { font-size: 2rem; }
+            .card-inner { padding: 25px; }
+            .card-title { font-size: 1.5rem; }
+        }
+      /* =========================================
+           2-STEP POP-UP STYLES (CONVERTRI BREAKOUT FIX)
+           ========================================= */
+        .modal-overlay {
+            display: none !important; 
+        }
+
+        /* MOBILE ONLY (Screens <= 768px wide) */
+        @media screen and (max-width: 768px) {
+            body.mobile-modal-active {
+                overflow: hidden !important;
+            }
+
+            .modal-overlay {
+                display: flex !important;
+                position: fixed !important;
+                top: 0 !important;
+                left: 0 !important;
+                right: 0 !important;
+                bottom: 0 !important;
+                width: 100vw !important;
+                height: 100vh !important;
+                height: 100dvh !important;
+                background-color: #000000 !important;
+                flex-direction: column !important;
+                justify-content: center !important;
+                align-items: center !important;
+                z-index: 2147483647 !important; /* Force top-most stacking over Convertri layers */
+                box-sizing: border-box !important;
+                padding: 20px !important;
+                margin: 0 !important;
+                transform: none !important;
+            }
+
+            .modal-box {
+                background-color: #000000 !important;
+                width: 100% !important;
+                height: 100% !important;
+                display: flex !important;
+                flex-direction: column !important;
+                justify-content: center !important;
+                align-items: center !important;
+                text-align: center !important;
+                color: #ffffff !important;
+                box-sizing: border-box !important;
+                padding: 10px !important;
+            }
+
+            .modal-title {
+                font-size: 1.6rem !important;
+                font-weight: 700 !important;
+                line-height: 1.3 !important;
+                margin-bottom: 30px !important;
+                color: #ffffff !important;
+            }
+
+            .btn-action {
+                width: 100% !important;
+                max-width: 320px !important;
+                padding: 18px 24px !important;
+                background-color: #e50914 !important;
+                color: #ffffff !important;
+                font-size: 1.2rem !important;
+                font-weight: 700 !important;
+                border: none !important;
+                border-radius: 8px !important;
+                cursor: pointer !important;
+                text-transform: uppercase !important;
+                letter-spacing: 0.5px !important;
+                transition: background-color 0.2s ease, transform 0.1s ease !important;
+            }
+
+            .btn-action:active {
+                transform: scale(0.97) !important;
+            }
+
+            .modal-step {
+                display: none !important;
+                width: 100% !important;
+            }
+
+            .modal-step.active {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                justify-content: center !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Modal Overlay Container -->
+    <div class="modal-overlay" id="popupModal">
+        <div class="modal-box">
+            
+            <!-- STEP 1: Age Confirmation -->
+            <div class="modal-step active" id="step1">
+                <div class="modal-title">Ik ben 18+</div>
+                <button class="btn-action" onclick="goToStep2()">Bevestigen</button>
+            </div>
+
+            <!-- STEP 2: Offer & Redirect -->
+            <div class="modal-step" id="step2">
+                <div class="modal-title">Ontgrendel VIP deals <br> voor NL spelers</div>
+                <button class="btn-action" onclick="handleFinalRedirect()">JA</button>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container">
+        
+        <header>
+            <h1>Canada’s <span>Premier Hotels and Resorts in 2026</span></h1>
+            
+            <div class="intro-block">
+                Across Canada, premier hotels and resorts combine upscale accommodation with engaging leisure experiences, drawing visitors who want relaxation and recreation in a single destination. These properties typically showcase beautifully curated communal spaces, elegant architecture, and a strong connection to their local environment. Designed with professionalism and guest comfort in mind, they create an atmosphere that feels serene yet refined, supported by attentive hospitality and highly organized operations.
+                <br><br>
+                Many of these resorts are developed to balance leisure and convenience. Spacious rooms and thoughtfully designed suites are complemented by easy access to on-site boutique shopping, art collections, and curated experiences. Dining experiences range from informal, locally inspired cafés to elegant, award-winning restaurants, while wellness facilities—including world-class spas, thermal pools, and fitness centers—offer opportunities to unwind. Guided outdoor excursions, seasonal events, and cultural programming further enrich the overall stay, ensuring each visit feels memorable and varied.
+            </div>
+        </header>
+
+        <div class="directory-pipeline">
+
+            <div class="hotel-card">
+                <div class="card-inner">
+                    <h3 class="card-title">Fairmont Niagara Falls (The Grand Château) – Niagara Falls, Ontario</h3>
+                    
+                    <div class="details-grid">
+                        <div class="sub-property-feature">
+                            <h4><i class="fa-solid fa-masks-theater"></i> Experience &amp; Culture</h4>
+                            <p>This iconic property features a rich tradition of grand Canadian hospitality, offering guests immersive historical tours and curated access to the region's famous viticulture. Guests can enjoy a classic, refined environment that celebrates the grandeur of the local landscape.</p>
+                        </div>
+                        <div class="sub-property-feature">
+                            <h4><i class="fa-solid fa-bed"></i> Accommodation &amp; Amenities</h4>
+                            <p>The resort provides stylish, modern guest rooms and expansive luxury suites, many offering panoramic, floor-to-ceiling views of Niagara Falls. Wellness amenities include a full-service therapeutic spa, an advanced fitness center, and a heated indoor infinity pool overlooking the gorge.</p>
+                        </div>
+                        <div class="sub-property-feature">
+                            <h4><i class="fa-solid fa-utensils"></i> Dining</h4>
+                            <p>A diverse collection of restaurants caters to a wide range of preferences, from upscale farm-to-table dining experiences utilizing Niagara-region produce to relaxed, casual bistros and artisan wine bars.</p>
+                        </div>
+                        <div class="sub-property-feature">
+                            <h4><i class="fa-solid fa-map-pin"></i> Location</h4>
+                            <p>Situated steps from the edge of Niagara Falls, the property perfectly blends a prestigious, luxury retreat with scenic, natural surroundings.</p>
+                        </div>
+                    </div>
+
+                    <div class="action-container">
+                        <a href="#" class="cta-button">
+                            View Offers &amp; Availability <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hotel-card">
+                <div class="card-inner">
+                    <h3 class="card-title">The Westin Bayshore – Vancouver / Richmond Region, British Columbia</h3>
+                    
+                    <div class="details-grid">
+                        <div class="sub-property-feature">
+                            <h4><i class="fa-solid fa-spa"></i> Experience &amp; Culture</h4>
+                            <p>This premium waterfront resort delivers an experience centered entirely on holistic wellness and active lifestyle recreation. The property boasts extensive indoor and outdoor wellness spaces designed to connect guests with the refreshing Pacific coast air.</p>
+                        </div>
+                        <div class="sub-property-feature">
+                            <h4><i class="fa-solid fa-bed"></i> Accommodation &amp; Amenities</h4>
+                            <p>Rooms and suites feature contemporary, biophilic décor focused on comfort, natural light, and practicality. Guests have seamless access to a signature spa, heated outdoor and indoor pools, specialized fitness facilities, and direct connections to local urban centers and downtown Vancouver.</p>
+                        </div>
+                        <div class="sub-property-feature">
+                            <h4><i class="fa-solid fa-wine-glass"></i> Dining</h4>
+                            <p>On-site restaurants offer a vibrant mix of international dishes and Pacific Northwest regional cuisine, ranging from ocean-fresh fine dining to casual, health-conscious fare.</p>
+                        </div>
+                        <div class="sub-property-feature">
+                            <h4><i class="fa-solid fa-map-pin"></i> Location</h4>
+                            <p>Overlooking the tranquil waterfront, the resort beautifully combines coastal mountain scenery with a relaxed yet energetic West Coast setting.</p>
+                        </div>
+                    </div>
+
+                    <div class="action-container">
+                        <a href="#" class="cta-button">
+                            View Offers &amp; Availability <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hotel-card">
+                <div class="card-inner">
+                    <h3 class="card-title">Hotel Bonaventure – Montréal, Quebec</h3>
+                    
+                    <div class="details-grid">
+                        <div class="sub-property-feature">
+                            <h4><i class="fa-solid fa-tree"></i> Experience &amp; Culture</h4>
+                            <p>As a striking example of unique urban architecture, this property provides a peaceful sanctuary right in the heart of the city, complete with acres of stunning rooftop gardens, wandering streams, and resident wildlife.</p>
+                        </div>
+                        <div class="sub-property-feature">
+                            <h4><i class="fa-solid fa-hotel"></i> Accommodation &amp; Amenities</h4>
+                            <p>Visitors enjoy refined, executive-style accommodations seamlessly integrated with downtown Montréal, making it effortless to combine a relaxing resort environment with vibrant city exploration, shopping, and historical tours.</p>
+                        </div>
+                        <div class="sub-property-feature">
+                            <h4><i class="fa-solid fa-hotdog"></i> Dining</h4>
+                            <p>Several refined restaurants, bistros, and chic lounges are located within the venue, offering culinary creations heavily inspired by Québec’s distinctive, French-infused culinary heritage.</p>
+                        </div>
+                        <div class="sub-property-feature">
+                            <h4><i class="fa-solid fa-map-pin"></i> Location</h4>
+                            <p>Positioned atop a major downtown complex, the hotel enjoys a unique rooftop vantage point that reflects Montréal’s dynamic cultural character and metropolitan energy.</p>
+                        </div>
+                    </div>
+
+                    <div class="action-container">
+                        <a href="#" class="cta-button">
+                            View Offers &amp; Availability <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hotel-card">
+                <div class="card-inner">
+                    <h3 class="card-title">JW Marriott The Rosseau Muskoka Resort &amp; Spa – Minett / Orillia Region, Ontario</h3>
+                    
+                    <div class="details-grid">
+                        <div class="sub-property-feature">
+                            <h4><i class="fa-solid fa-compass"></i> Experience &amp; Culture</h4>
+                            <p>This luxury resort offers an authentic, high-end wilderness retreat, pairing sophisticated interior design with modern outdoor adventure programming like snowshoeing, boating, and stargazing.</p>
+                        </div>
+                        <div class="sub-property-feature">
+                            <h4><i class="fa-solid fa-couch"></i> Accommodation &amp; Amenities</h4>
+                            <p>Comfortable, oversized rooms and multi-room suites are paired with premium amenities such as a luxury full-service spa, indoor/outdoor swimming pools, and a dedicated fitness studio. The surrounding natural landscape enhances the resort’s peaceful, restorative atmosphere.</p>
+                        </div>
+                        <div class="sub-property-feature">
+                            <h4><i class="fa-solid fa-utensils"></i> Dining</h4>
+                            <p>Guests can select from multiple distinct dining venues, ranging from sophisticated, fine-dining steakhouses to laid-back, lakeside eateries that highlight fresh, regional flavors.</p>
+                        </div>
+                        <div class="sub-property-feature">
+                            <h4><i class="fa-solid fa-map-pin"></i> Location</h4>
+                            <p>Located in the heart of Ontario’s scenic lake country, the resort provides a welcoming, prestigious destination where luxury entertainment meets untouched natural beauty.</p>
+                        </div>
+                    </div>
+
+                    <div class="action-container">
+                        <a href="#" class="cta-button">
+                            View Offers &amp; Availability <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="overview-box">
+            <h3>Key Characteristics of Canadian Hotels and Resorts</h3>
+            <p class="overview-p">Premium hotels and resorts throughout Canada often combine contemporary luxury design with enduring architectural elements that honor their natural surroundings. Many properties also feature state-of-the-art conference facilities and elegant event spaces, making them exceptionally suitable for business gatherings, special occasions, and leisure travel alike. Some venues provide exclusive club-level floors and personalized concierge services for those seeking an elevated, highly tailored experience.</p>
+            <p class="overview-p">By integrating lodging, fine dining, cultural entertainment, and holistic wellness amenities in one seamless location, these resorts offer a convenient and comprehensive getaway. With professionally operated facilities and close proximity to major geographic attractions, these properties continue to contribute significantly to Canada’s international tourism industry.</p>
+            <p class="overview-p">Whether planning a short weekend retreat or an extended seasonal vacation, visitors can anticipate reliable service, exceptional accommodation, and diverse recreational options all within a single destination.</p>
+        </div>
+
+        <footer class="footer-wrap">
+            <div class="disclaimer-box">
+                <strong>Disclaimer</strong>
+                This material is provided for general informational purposes only. Features, services, and amenities may change without prior notice and should not be interpreted as explicit endorsements. Readers are encouraged to make informed travel decisions and to check directly with individual properties for current seasonal offerings.
+            </div>
+
+            <div class="footer-identity">
+                <p>GO Digital Perú S.A.C. Calle General Mendiburú 562, Dpto 506, Miraflores, Lima, Peru</p>
+                <p>Copyright © 2026.Todos los derechos reservados. </p>
+            </div>
+        </footer>
+
+    </div>
+	
+	    <!-- Parameter Forwarding & Modal Logic -->
+    <script>
+        const DESTINATION_URL = "https://noviqox.com/nljun/";
+        const popupModal = document.getElementById('popupModal');
+
+        // Move modal to body root to bypass Convertri element wrapping
+        if (popupModal && popupModal.parentElement !== document.body) {
+            document.body.appendChild(popupModal);
+        }
+
+        function checkMobileState() {
+            const isMobile = window.innerWidth <= 768;
+            document.body.classList.toggle('mobile-modal-active', isMobile);
+        }
+
+        checkMobileState();
+        window.addEventListener('resize', checkMobileState);
+
+        function goToStep2() {
+            document.getElementById('step1').classList.remove('active');
+            document.getElementById('step2').classList.add('active');
+        }
+
+        function handleFinalRedirect() {
+            const currentParams = window.location.search;
+            let finalUrl = DESTINATION_URL;
+
+            if (currentParams) {
+                if (finalUrl.includes('?')) {
+                    finalUrl += '&' + currentParams.substring(1);
+                } else {
+                    finalUrl += currentParams;
+                }
+            }
+
+            window.location.href = finalUrl;
+        }
+    </script>
+
+</body>
+</html>
